@@ -94,7 +94,8 @@ function buildCharts(sample) {
     //  Create the layout for the bar chart. 
     var barLayout = {
       title: "Top 10 Bacterial Species (OTUs)",
-      width: 400
+      width: 400,
+      paper_bgcolor: "lightpink",
     };
 
     //  Use Plotly to plot the data with the layout. 
@@ -119,6 +120,7 @@ function buildCharts(sample) {
       xaxis: { title: 'OTU ID', tickmode: 'linear', dtick: 500 },
       hovermode: 'closest',
       margin: { t: 30 },
+      paper_bgcolor: "lightpink",
       width: 1000
     };
     //  Use Plotly to plot the data with the layout.
@@ -127,7 +129,7 @@ function buildCharts(sample) {
     //  Create the trace for the gauge chart.
     var gaugeData = [      {        domain: { x: [0, 1], y: [0, 1] },
     value: washFrequency,
-    title: { text: "Belly Button Washing Frequency<br>Scrubs per Week", font: {color: "darkgrey"} },
+    title: { text: "Belly Button Washing Frequency<br>Scrubs per Week", font: {color: "black"} },
     type: "indicator",
     mode: "gauge+number",
     gauge: {
@@ -148,7 +150,7 @@ function buildCharts(sample) {
       width: 500, 
       height: 400, 
       margin: { t: 25, r: 25, l: 25, b: 25 },
-      paper_bgcolor: "white",
+      paper_bgcolor: "lightpink",
       font: { color: "black", family: "Arial" }
     };
     // Use Plotly to plot the gauge data and layout.
